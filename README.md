@@ -1,5 +1,5 @@
 # production-project
-Advanced frontend development with React
+Advanced frontend development on React + TypeScript
 
 ## Status
 Currently is under development. 
