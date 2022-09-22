@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
 import { classNames } from "shared"
+import { AppLink } from "shared/ui/Applink/AppLink"
 import cls from "./Navbar.module.scss"
 
 interface NavbarProps {
@@ -10,8 +10,8 @@ export const Navbar = ({ className }: NavbarProps) => {
   return (
     <div className={classNames(cls.navbar, {}, [className])}>
       <div className={cls.links}></div>
-      <Link to={'/'}>Главная</Link>
-      <Link to={'/about'}>О сайте</Link>
+      <AppLink to={'/'}>Главная</AppLink>
+      <AppLink to={'/about'}>О сайте</AppLink>
     </div>
   )
 }
