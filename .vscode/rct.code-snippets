@@ -1,0 +1,23 @@
+{
+  "rct": {
+    "prefix": "rcomp",
+    "scope": "typescript, typescriptreact",
+    "body": [
+      "import { classNames } from 'shared/lib/classNames/classNames'",
+      "import cls from './${TM_FILENAME_BASE}.module.scss'",
+      "",
+      "interface ${TM_FILENAME_BASE}Props {",
+      "className?: string;",
+      "}",
+      "export const ${TM_FILENAME_BASE} = ({ className }: ${TM_FILENAME_BASE}Props) => {",
+      "",
+      "return (",
+      "<div className={classNames(cls.${TM_FILENAME_BASE/(.*)/${1:/downcase}/}, {}, [className])}>",
+      "</div>",
+      ");",
+      "};",
+      ""
+    ],
+    "description": "Компонент с нужными импортами и интерфейсом"
+  }
+}
