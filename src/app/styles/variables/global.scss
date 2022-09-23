@@ -1,4 +1,5 @@
 :root {
+  // Fonts
   --font-family-main: Consolas, 'Verdana', monospace;
 
   --font-size-m: 16px;
@@ -9,5 +10,10 @@
   --font-line-l: 32px;
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
+  
+  // Dimensions
   --navbar-height: 50px;
+
+  --sidebar-width: 300px;
+  --sidebar-width-collapsed: 50px;
 }
