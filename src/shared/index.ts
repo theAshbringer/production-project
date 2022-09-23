@@ -1,2 +1,2 @@
-export { AppRoutes, RoutePath } from './lib/router'
+export { AppRoutes, RoutePath } from './config/routes'
 export { classNames } from './lib'
