@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames'
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
+import { ThemeSwitcher } from '../ThemeSwitcher/ThemeSwitcher';
 import cls from './Sidebar.module.scss'
 
 interface SidebarProps {
