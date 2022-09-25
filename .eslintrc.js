@@ -21,10 +21,6 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
-    // indent: [
-    //   'error',
-    //   2,
-    // ],
     'linebreak-style': [
       'error',
       'windows',
@@ -37,14 +33,12 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-shadow': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    // quotes: [
-    //   'error',
-    //   'single',
-    // ],
-    // semi: [
-    //   'error',
-    //   'always',
-    // ],
+    'react/function-component-definition': 'off',
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+    'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
+    'react/jsx-props-no-spreading': 'warn',
+    '@typescript-eslint/ban-ts-comment': 'warn',
   },
   globals: {
     __IS_DEV__: true,
