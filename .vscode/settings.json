@@ -5,7 +5,18 @@
   ],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.sourceLanguage": "ru",
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.formatOnSave": true,
-  "eslint.format.enable": true
+  // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  // "editor.formatOnSave": true,
+  // "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.formatOnSave": false,
 }
