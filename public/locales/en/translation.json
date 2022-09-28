@@ -2,5 +2,6 @@
   "lang": "Русский",
   "main.text": "Main Page info",
   "nav.about": "About",
-  "nav.main": "Main page"
+  "nav.main": "Main page",
+  "page-not-found": "Page Not Found"
 }

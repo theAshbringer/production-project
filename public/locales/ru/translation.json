@@ -2,5 +2,6 @@
   "lang": "English",
   "main.text": "Информация главной страницы",
   "nav.about": "О сайте",
-  "nav.main": "Главная"
+  "nav.main": "Главная",
+  "page-not-found": "Страница не найдена"
 }
