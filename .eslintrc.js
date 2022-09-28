@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     commonjs: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'eslint:recommended',
@@ -39,6 +40,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/jsx-props-no-spreading': 'warn',
     '@typescript-eslint/ban-ts-comment': 'warn',
+    'max-len': ['warn', { code: 100, ignoreComments: true }],
   },
   globals: {
     __IS_DEV__: true,

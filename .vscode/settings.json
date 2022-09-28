@@ -5,5 +5,7 @@
   ],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.sourceLanguage": "ru",
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true
 }
