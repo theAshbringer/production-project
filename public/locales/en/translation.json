@@ -3,5 +3,12 @@
   "main.text": "Main Page info",
   "nav.about": "About",
   "nav.main": "Main page",
-  "page-not-found": "Page Not Found"
+  "page-error": {
+    "error-message": "Oops, looks like there is some error :(",
+    "try-reload": "Try reload?"
+  },
+  "page-not-found": {
+    "error": "Error: 404 page not found",
+    "sorry": "Sorry, the page you're looking for cannot be accessed"
+  }
 }
