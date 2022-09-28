@@ -1,20 +1,23 @@
+/* eslint-disable */
 {
   "rct": {
     "prefix": "rcomp",
     "scope": "typescript, typescriptreact",
     "body": [
+      "import { useTranslation } from 'react-i18next';",
       "import { classNames } from 'shared/lib/classNames/classNames'",
       "import cls from './${TM_FILENAME_BASE}.module.scss'",
       "",
       "interface ${TM_FILENAME_BASE}Props {",
-      "className?: string;",
+      " className?: string;",
       "}",
       "export const ${TM_FILENAME_BASE} = ({ className }: ${TM_FILENAME_BASE}Props) => {",
-      "",
-      "return (",
-      "<div className={classNames(cls.${TM_FILENAME_BASE/(.*)/${1:/camelcase}/}, {}, [className])}>",
-      "</div>",
-      ");",
+      " const { t } = useTranslation();",
+      " return (",
+      "   <div className={classNames(cls.${TM_FILENAME_BASE/(.*)/${1:/camelcase}/}, {}, [className])}>",
+      "     ${TM_FILENAME_BASE}",
+      "   </div>",
+      " );",
       "};",
       ""
     ],
