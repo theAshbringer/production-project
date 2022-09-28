@@ -54,6 +54,10 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",

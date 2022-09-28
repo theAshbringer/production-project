@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './PageNotFound.module.scss';
+import { faGhost } from '@fortawesome/free-solid-svg-icons';
+import './PageNotFound.scss';
+import { Button, ThemeButton } from 'shared/ui/Button';
 
 interface PageNotFoundProps {
  className?: string;
@@ -8,8 +10,15 @@ interface PageNotFoundProps {
 export const PageNotFound = ({ className }: PageNotFoundProps) => {
   const { t } = useTranslation();
   return (
-    <div className={classNames(cls.pageNotFound, {}, [className])}>
-      {t('page-not-found')}
-    </div>
+    <main>
+      <h1>
+        4
+        <span><FontAwesomeIcon icon={faGhost} /></span>
+        4
+      </h1>
+      <h2>{t('page-not-found.error')}</h2>
+      <p>{t('page-not-found.sorry')}</p>
+      <Button theme={ThemeButton.CLEAR} className="back">Вернуться назад</Button>
+    </main>
   );
 };
