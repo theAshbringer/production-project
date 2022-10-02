@@ -1,3 +1,4 @@
+import path from 'path';
 /*
 
  * For a detailed explanation regarding each configuration property and type check, visit:
@@ -46,6 +47,7 @@ export default {
 
   moduleNameMapper: {
     '\\.(scss|css)$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
   },
 
   modulePaths: ['<rootDir>src'],
