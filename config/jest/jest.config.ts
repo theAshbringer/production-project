@@ -20,6 +20,7 @@ export default {
   // An array of directory names to be searched recursively up from the requiring module's location
   moduleDirectories: [
     'node_modules',
+    // 'src',
   ],
 
   // The root directory that Jest should scan for tests and modules within
@@ -40,7 +41,16 @@ export default {
     'node',
   ],
 
-  // // A list of reporter names that Jest uses when writing coverage reports
+  // A list of paths to modules that run some code to configure or set up the testing framework before each test
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+
+  moduleNameMapper: {
+    '\\.(scss|css)$': 'identity-obj-proxy',
+  },
+
+  modulePaths: ['<rootDir>src'],
+
+  // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
   //   'json',
   //   'text',
@@ -136,9 +146,6 @@ export default {
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
   // setupFiles: [],
-
-  // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
