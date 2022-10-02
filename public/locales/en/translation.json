@@ -10,5 +10,6 @@
   "page-not-found": {
     "error": "Error: 404 page not found",
     "sorry": "Sorry, the page you're looking for cannot be accessed"
-  }
+  },
+  "toggle": "Toggle"
 }
