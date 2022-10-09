@@ -12,9 +12,9 @@
     "lint:style": "npx stylelint \"**/*.scss\"",
     "lint:style:fix": "npx stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
-    "test:ui": "npx loki test  --chromeFlags='--headless --disable-gpu --hide-scrollbars --no-sandbox'",
+    "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
-    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static --chromeFlags='--headless --disable-gpu --hide-scrollbars --no-sandbox'",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook"
   },
@@ -88,21 +88,21 @@
     "react-refresh": "^0.12.0",
     "react-router-dom": "^6.2.1"
   },
-  "overrides": {
-    "chrome-remote-interface": "0.31.3"
-  },
   "loki": {
     "configurations": {
       "chrome.laptop": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "width": 1366,
         "height": 768,
         "deviceScaleFactor": 1,
-        "mobile": false
+        "mobile": false,
+        "chromeDockerUseCopy": true
+        
       },
       "chrome.iphone7": {
-        "target": "chrome.app",
-        "preset": "iPhone 7"
+        "target": "chrome.docker",
+        "preset": "iPhone 7",
+        "chromeDockerUseCopy": true
       }
     }
   }
