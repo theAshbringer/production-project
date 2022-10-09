@@ -10,3 +10,11 @@
   background: none;
   outline: none;
 }
+
+.solid {
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 7px;
+}
