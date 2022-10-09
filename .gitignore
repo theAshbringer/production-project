@@ -3,3 +3,4 @@
 node_modules
 .loki/current
 .loki/difference
+storybook-static
