@@ -11,6 +11,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'airbnb',
     'plugin:i18next/recommended',
+    'plugin:storybook/recommended',
   ],
   overrides: [
   ],
