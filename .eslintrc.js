@@ -25,10 +25,7 @@ module.exports = {
     'i18next',
   ],
   rules: {
-    'linebreak-style': [
-      'error',
-      'windows',
-    ],
+    'linebreak-style': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
