@@ -1,13 +1,11 @@
+/* eslint-disable i18next/no-literal-string */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import { faGhost } from '@fortawesome/free-solid-svg-icons';
 import './PageNotFound.scss';
 import { Button, ThemeButton } from 'shared/ui/Button';
 
-interface PageNotFoundProps {
- className?: string;
-}
-export const PageNotFound = ({ className }: PageNotFoundProps) => {
+export const PageNotFound = () => {
   const { t } = useTranslation();
   return (
     <main>
@@ -18,7 +16,7 @@ export const PageNotFound = ({ className }: PageNotFoundProps) => {
       </h1>
       <h2>{t('page-not-found.error')}</h2>
       <p>{t('page-not-found.sorry')}</p>
-      <Button theme={ThemeButton.CLEAR} className="back">Вернуться назад</Button>
+      <Button theme={ThemeButton.CLEAR} className="back">{t('page-not-found.go-back')}</Button>
     </main>
   );
 };

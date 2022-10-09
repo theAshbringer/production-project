@@ -14,6 +14,19 @@ module.exports = {
     'plugin:storybook/recommended',
   ],
   overrides: [
+    {
+      files: ['./src/**/ErrorBoundary.tsx'],
+      rules: {
+        'no-console': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+      },
+    },
+    {
+      files: ['./config/storybook/webpack.config.ts'],
+      rules: {
+        '@typescript-eslint/no-explicit-any': 'off',
+      },
+    },
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -38,7 +51,7 @@ module.exports = {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
     'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
-    'react/jsx-props-no-spreading': 'warn',
+    'react/jsx-props-no-spreading': 'off',
     '@typescript-eslint/ban-ts-comment': 'warn',
     'max-len': ['warn', { code: 100, ignoreComments: true }],
   },

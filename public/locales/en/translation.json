@@ -9,7 +9,9 @@
   },
   "page-not-found": {
     "error": "Error: 404 page not found",
+    "go-back": "Go back",
     "sorry": "Sorry, the page you're looking for cannot be accessed"
   },
+  "throw-error": "Throw error",
   "toggle": "Toggle"
 }
