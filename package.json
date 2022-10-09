@@ -12,9 +12,9 @@
     "lint:style": "npx stylelint \"**/*.scss\"",
     "lint:style:fix": "npx stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
-    "test:ui": "npx loki test",
+    "test:ui": "npx loki test  --chromeFlags='--headless --disable-gpu --hide-scrollbars --no-sandbox'",
     "test:ui:ok": "npx loki approve",
-    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static --chromeFlags='--headless --disable-gpu --hide-scrollbars --no-sandbox'",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook"
   },
