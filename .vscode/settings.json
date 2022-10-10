@@ -19,5 +19,5 @@
   "less.validate": false,
   "scss.validate": false,
   "editor.formatOnSave": false,
-  "jest.jestCommandLine": "npm run unit --",
+  "jest.jestCommandLine": "npm run test:unit --",
 }
