@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import { faGhost } from '@fortawesome/free-solid-svg-icons';
 import './PageNotFound.scss';
-import { Button, ThemeButton } from 'shared/ui/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button';
 
 export const PageNotFound = () => {
   const { t } = useTranslation();
@@ -16,7 +16,7 @@ export const PageNotFound = () => {
       </h1>
       <h2>{t('page-not-found.error')}</h2>
       <p>{t('page-not-found.sorry')}</p>
-      <Button theme={ThemeButton.CLEAR} className="back">{t('page-not-found.go-back')}</Button>
+      <Button theme={ButtonTheme.CLEAR} className="back">{t('page-not-found.go-back')}</Button>
     </main>
   );
 };

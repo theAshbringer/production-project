@@ -19,3 +19,12 @@
   bottom: 24px;
   gap: 20px;
 }
+
+.collapseBtn {
+  position: absolute;
+
+  @debug -1 * 4px;
+
+  right: calc(-1 * var(--font-line-l));
+  bottom: 40px;
+}
