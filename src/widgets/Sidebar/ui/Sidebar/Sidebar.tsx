@@ -3,6 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button';
 import { ButtonSize } from 'shared/ui/Button/Button';
 import { LangSwitcher } from '../LangSwitcher/LangSwitcher';
+import { NavLinks } from '../NavLinks/NavLinks';
 import { ThemeSwitcher } from '../ThemeSwitcher/ThemeSwitcher';
 import cls from './Sidebar.module.scss';
 
@@ -21,6 +22,10 @@ export const Sidebar = ({ className }: SidebarProps) => {
       data-testid="sidebar"
       className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}
     >
+      <NavLinks
+        className={cls.links}
+        navbarCollapsed={collapsed}
+      />
       <Button
         className={cls.collapseBtn}
         theme={ButtonTheme.BACKGROUND}
@@ -36,7 +41,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
       </Button>
       <div className={cls.switchers}>
         <ThemeSwitcher />
-        <LangSwitcher />
+        <LangSwitcher
+          short={collapsed}
+        />
       </div>
     </div>
   );
