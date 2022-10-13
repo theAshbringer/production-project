@@ -12,6 +12,7 @@ module.exports = {
     'airbnb',
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
+    'plugin:react-hooks/recommended',
   ],
   overrides: [
     {
@@ -54,6 +55,8 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     '@typescript-eslint/ban-ts-comment': 'warn',
     'max-len': ['warn', { code: 100, ignoreComments: true }],
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
   },
   globals: {
     __IS_DEV__: true,
