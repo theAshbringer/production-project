@@ -28,6 +28,12 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
       },
     },
+    {
+      files: ['**/src/**/*.{test,stories}.tsx'],
+      rules: {
+        'max-len': 'off',
+      },
+    },
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
