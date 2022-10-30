@@ -1,3 +1,4 @@
+import { LoginModal } from 'features/AuthByUsername';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib';
@@ -13,26 +14,27 @@ export const Navbar = ({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
-  const onToggleModal = useCallback(() => {
-    setIsLoginOpen((prev) => !prev);
+  const onShowLogin = useCallback(() => {
+    setIsLoginOpen(true);
+  }, []);
+
+  const onCloseLogin = useCallback(() => {
+    setIsLoginOpen(false);
   }, []);
 
   return (
     <div className={classNames(cls.navbar, {}, [className])}>
       <Button
-        onClick={onToggleModal}
+        onClick={onShowLogin}
         theme={ButtonTheme.BACKGROUND_INVERTED}
         className={cls.links}
       >
         {t('login')}
       </Button>
-      <Modal
-        onClose={onToggleModal}
+      <LoginModal
+        onClose={onCloseLogin}
         isOpen={isLoginOpen}
-        // eslint-disable-next-line i18next/no-literal-string
-      >
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis vel iste, eaque omnis aliquam minima voluptas velit accusantium repudiandae sit perferendis quis consectetur. Nihil pariatur distinctio nemo alias vitae qui!
-      </Modal>
+      />
     </div>
   );
 };
