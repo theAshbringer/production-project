@@ -1,3 +1,4 @@
+import { useTheme } from 'app/providers';
 import {
   MouseEvent, ReactNode, useCallback, useEffect,
 } from 'react';
@@ -18,10 +19,6 @@ export const Modal = (props: ModalProps) => {
     isOpen = false,
     onClose,
   } = props;
-
-  const mods: Record<string, boolean> = {
-    [cls.opened]: isOpen,
-  };
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -48,6 +45,10 @@ export const Modal = (props: ModalProps) => {
       window.removeEventListener('keydown', onKeyDown);
     };
   }, [isOpen, onKeyDown]);
+
+  const mods: Record<string, boolean> = {
+    [cls.opened]: isOpen,
+  };
 
   return (
     <Portal>
