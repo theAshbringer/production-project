@@ -1,4 +1,8 @@
 {
+  "auth": {
+    "enter-password": "Введите пароль",
+    "enter-username": "Введите username"
+  },
   "lang": "English",
   "login": "Войти",
   "main.text": "Информация главной страницы",

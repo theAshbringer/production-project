@@ -36,6 +36,10 @@ export const Input = memo((props: InputProps) => {
     setIsFocused(true);
   };
 
+  const onSelect = (e: any) => {
+    setCaretPosition(e?.target.selectionStart || 0);
+  };
+
   return (
     <div
       className={classNames(cls.inputWrapper, {}, [className])}
@@ -53,6 +57,7 @@ export const Input = memo((props: InputProps) => {
           type={type}
           onBlur={onBlur}
           onFocus={onFocus}
+          onSelect={onSelect}
         />
         {isFocused
         && (
