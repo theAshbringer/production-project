@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes, memo } from 'react';
+import React, { InputHTMLAttributes, memo, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 
@@ -20,8 +20,20 @@ export const Input = memo((props: InputProps) => {
     type = 'text',
   } = props;
 
+  const [isFocused, setIsFocused] = useState(false);
+  const [caretPosition, setCaretPosition] = useState(0);
+
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.value);
+    setCaretPosition(e.target.value.length);
+  };
+
+  const onBlur = () => {
+    setIsFocused(false);
+  };
+
+  const onFocus = () => {
+    setIsFocused(true);
   };
 
   return (
@@ -39,8 +51,16 @@ export const Input = memo((props: InputProps) => {
           value={value}
           onChange={onChangeHandler}
           type={type}
+          onBlur={onBlur}
+          onFocus={onFocus}
         />
-        <span className={cls.caret} />
+        {isFocused
+        && (
+        <span
+          className={cls.caret}
+          style={{ left: `${caretPosition}ch` }}
+        />
+        )}
       </div>
     </div>
   );
