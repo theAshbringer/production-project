@@ -36,6 +36,7 @@ export const Button: FC<ButtonProps> = (props) => {
   const mods: Record<string, boolean> = {
     [cls.square]: square,
     [cls.round]: round,
+    [cls.disabled]: otherProps.disabled,
   };
 
   return (
