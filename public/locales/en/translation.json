@@ -4,7 +4,10 @@
     "enter-username": "Enter username"
   },
   "lang": "Русский",
-  "login": "Log in",
+  "login": {
+    "login-btn": "Sign in",
+    "title": "Authorize"
+  },
   "main.text": "Main Page info",
   "nav.about": "About",
   "nav.main": "Main page",

@@ -29,7 +29,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         theme={ButtonTheme.BACKGROUND_INVERTED}
         className={cls.links}
       >
-        {t('login')}
+        {t('login.login-btn')}
       </Button>
       <LoginModal
         onClose={onCloseLogin}

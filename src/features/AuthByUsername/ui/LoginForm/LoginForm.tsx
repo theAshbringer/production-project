@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button';
 import { Input } from 'shared/ui/Input/Input';
+import { Text, TextTheme } from 'shared/ui/Text';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { getLoginState } from '../../model/selectors/getLoginState/getLoginState';
 import { loginActions } from '../../model/slice/loginSlice';
@@ -16,7 +17,9 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
   const { t } = useTranslation();
 
   const dispatch = useDispatch();
-  const { username, password } = useSelector(getLoginState);
+  const {
+    username, password, error, isLoading,
+  } = useSelector(getLoginState);
 
   const onChangeUsername = useCallback((value: string) => {
     dispatch(loginActions.setUsername(value));
@@ -32,6 +35,8 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
 
   return (
     <div className={classNames(cls.loginForm, {}, [className])}>
+      <Text title={t('login.title')} />
+      {error && <Text textContent={error} theme={TextTheme.ERROR} />}
       <Input
         type="text"
         className={cls.input}
@@ -50,8 +55,9 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
       <Button
         className={cls.loginBtn}
         onClick={onLoginClick}
+        disabled={isLoading}
       >
-        {t('login')}
+        {t('login.login-btn')}
       </Button>
     </div>
   );
