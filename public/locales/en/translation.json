@@ -5,7 +5,8 @@
   },
   "lang": "Русский",
   "login": {
-    "login-btn": "Sign in",
+    "login-btn": "Sign In",
+    "logout-btn": "Sign Out",
     "title": "Authorize"
   },
   "main.text": "Main Page info",
