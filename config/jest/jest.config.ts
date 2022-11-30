@@ -54,6 +54,7 @@ export default {
   globals: {
     __IS_DEV__: true,
   },
+  transformIgnorePatterns: ['node_modules/(?!axios)'],
 
   // modulePaths: ['<rootDir>src'],
 
