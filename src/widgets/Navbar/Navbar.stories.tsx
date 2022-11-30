@@ -1,11 +1,17 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Theme } from 'app/providers';
-import { ThemeDecorator } from 'shared/config/storybook';
+import { StoreDecorator, ThemeDecorator } from 'shared/config/storybook';
 import { Navbar } from './Navbar';
 
 export default {
   title: 'widgets/Navbar',
   component: Navbar,
+  decorators: [StoreDecorator({
+    login: {
+      username: '123',
+      password: '123',
+    },
+  })],
   argTypes: {
     backgroundColor: { control: 'color' },
   },

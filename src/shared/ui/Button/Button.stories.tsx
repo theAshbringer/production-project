@@ -97,3 +97,10 @@ RoundAndSquare.args = {
   round: true,
   square: true,
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Disabled',
+  theme: ButtonTheme.BACKGROUND_INVERTED,
+  disabled: true,
+};
