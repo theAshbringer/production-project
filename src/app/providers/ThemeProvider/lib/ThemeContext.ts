@@ -1,8 +1,8 @@
 import { createContext } from 'react';
 
 enum Theme {
-  LIGHT = 'light',
-  DARK = 'dark'
+  LIGHT = 'app_theme_light',
+  DARK = 'app_theme_dark'
 }
 
 interface ThemeContextProps {

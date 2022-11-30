@@ -34,6 +34,13 @@ module.exports = {
         'max-len': 'off',
       },
     },
+    {
+      files: ['./json-server/*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+        'no-console': 'off',
+      },
+    },
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -63,6 +70,7 @@ module.exports = {
     'max-len': ['warn', { code: 100, ignoreComments: true }],
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
+    'no-param-reassign': 'off',
   },
   globals: {
     __IS_DEV__: true,

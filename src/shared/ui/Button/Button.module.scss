@@ -48,3 +48,7 @@
   height: var(--font-line-xl);
   font-size: var(--font-size-xl);
 }
+
+.disabled {
+  opacity: 0.5;
+}

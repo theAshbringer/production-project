@@ -2,13 +2,13 @@ import { ButtonHTMLAttributes, FC } from 'react';
 import { classNames } from 'shared/lib';
 import cls from './Button.module.scss';
 
-export const enum ButtonSize {
+export enum ButtonSize {
   M = 'size-m',
   L = 'size-l',
   XL = 'size-xl',
 }
 
-export const enum ButtonTheme {
+export enum ButtonTheme {
   CLEAR = 'clear',
   BACKGROUND = 'background',
   BACKGROUND_INVERTED = 'background-inverted',
@@ -36,6 +36,7 @@ export const Button: FC<ButtonProps> = (props) => {
   const mods: Record<string, boolean> = {
     [cls.square]: square,
     [cls.round]: round,
+    [cls.disabled]: otherProps.disabled,
   };
 
   return (

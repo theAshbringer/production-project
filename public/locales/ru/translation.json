@@ -1,6 +1,15 @@
 {
+  "auth": {
+    "enter-password": "Введите пароль",
+    "enter-username": "Введите username"
+  },
   "lang": "English",
-  "login": "Войти",
+  "login": {
+    "error": "Неверный логин или пароль.",
+    "login-btn": "Войти",
+    "logout-btn": "Выйти",
+    "title": "Авторизация"
+  },
   "main.text": "Информация главной страницы",
   "nav.about": "О сайте",
   "nav.main": "Главная",
