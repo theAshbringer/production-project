@@ -67,7 +67,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/jsx-props-no-spreading': 'off',
     '@typescript-eslint/ban-ts-comment': 'warn',
-    'max-len': ['warn', { code: 100, ignoreComments: true }],
+    'max-len': ['warn', { code: 110, ignoreComments: true }],
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
     'no-param-reassign': 'off',
