@@ -5,23 +5,3 @@
   gap: 15px;
   align-items: start;
 }
-
-.icon {
-  margin-right: 10px;
-  fill: var(--inverted-primary-color);
-}
-
-.link {
-  opacity: 1;
-}
-
-.collapsed {
-  opacity: 0;
-  width: 0;
-  transition: opacity 0.2s;
-}
-
-.linkItem {
-  display: flex;
-  align-items: center;
-}
