@@ -2,8 +2,9 @@ import { getUserAuthData, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUsername';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button, ButtonTheme } from 'shared/ui/Button';
 import cls from './Navbar.module.scss';
 
@@ -14,7 +15,7 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const authData = useSelector(getUserAuthData);
 
   const onShowLogin = useCallback(() => {
