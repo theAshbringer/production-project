@@ -4,8 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { faGhost } from '@fortawesome/free-solid-svg-icons';
 import './PageNotFound.scss';
 import { Button, ButtonTheme } from 'shared/ui/Button';
+import { memo } from 'react';
 
-export const PageNotFound = () => {
+export const PageNotFound = memo(() => {
   const { t } = useTranslation();
   return (
     <main>
@@ -19,4 +20,4 @@ export const PageNotFound = () => {
       <Button theme={ButtonTheme.CLEAR} className="back">{t('page-not-found.go-back')}</Button>
     </main>
   );
-};
+});

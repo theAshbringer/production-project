@@ -1,4 +1,6 @@
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { classNames } from 'shared/lib';
 import { AppLink, AppLinkTheme } from 'shared/ui/Applink/AppLink';
 import { NavLinkItemType } from 'widgets/Sidebar/model/navItems';
 import cls from './NavLinkItem.module.scss';
@@ -8,12 +10,12 @@ interface NavLinkItemProps {
   item: NavLinkItemType;
 }
 
-export const NavLinkItem = ({ collapsed, item }: NavLinkItemProps) => {
+export const NavLinkItem = memo(({ collapsed, item }: NavLinkItemProps) => {
   const collapsedLinkClass = [cls.link, collapsed ? cls.collapsed : ''].join(' ');
   const { t } = useTranslation();
   return (
     <AppLink
-      className={cls.linkItem}
+      className={classNames(cls.linkItem, { [cls.collapsed]: collapsed })}
       theme={AppLinkTheme.SECONDARY}
       to={item.path}
     >
@@ -25,4 +27,4 @@ export const NavLinkItem = ({ collapsed, item }: NavLinkItemProps) => {
       </span>
     </AppLink>
   );
-};
+});
