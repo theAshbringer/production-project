@@ -10,8 +10,11 @@
     "title": "Authorize"
   },
   "main.text": "Main Page info",
-  "nav.about": "About",
-  "nav.main": "Main page",
+  "nav": {
+    "profile": "Profile",
+    "about": "About",
+    "main": "Main page"
+  },
   "page-error": {
     "error-message": "Oops, looks like there is some error :(",
     "try-reload": "Try reload?"
