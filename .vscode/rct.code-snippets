@@ -22,5 +22,20 @@
       ""
     ],
     "description": "Компонент с нужными импортами и интерфейсом"
-  }
+  },
+    "test": {
+      "prefix": "testt",
+      "scope": "typescript, typescriptreact",
+      "body": [
+        "import { ${TM_FILENAME_BASE/(.*)/${1:/camelcase}/} } from './${TM_FILENAME_BASE}';",
+        "describe('${TM_FILENAME_BASE}', () => {",
+        "  test('should $0', () => {",
+        "    expect().toEqual();",
+        "  });",
+        "});"
+      ],
+      "description": "Базовый тест с использованием Jest и TypeScript"
+    }
+  
+  
 }
