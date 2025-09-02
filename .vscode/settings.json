@@ -1,23 +1,18 @@
 {
-  "i18n-ally.localesPaths": [
-    "public/locales",
-    "src/shared/config/i18n"
-  ],
+  "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.sourceLanguage": "ru",
   // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   // "editor.formatOnSave": true,
   // "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
   },
-  "eslint.validate": [
-    "javascript"
-  ],
+  "eslint.validate": ["javascript"],
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "editor.formatOnSave": false,
-  "jest.jestCommandLine": "npm run test:unit --",
+  "editor.formatOnSave": true,
+  "jest.jestCommandLine": "npm run test:unit --"
 }
