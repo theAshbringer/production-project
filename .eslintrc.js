@@ -13,6 +13,7 @@ module.exports = {
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
     'plugin:react-hooks/recommended',
+    'prettier',
   ],
   overrides: [
     {
@@ -46,11 +47,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'i18next',
-  ],
+  plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
     'linebreak-style': 'off',
     'import/prefer-default-export': 'off',
@@ -62,7 +59,10 @@ module.exports = {
     'no-shadow': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'react/function-component-definition': 'off',
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+    'react/jsx-filename-extension': [
+      2,
+      { extensions: ['.js', '.jsx', '.tsx'] },
+    ],
     'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
     'react/jsx-props-no-spreading': 'off',
