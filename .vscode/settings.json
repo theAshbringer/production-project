@@ -2,13 +2,11 @@
   "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.sourceLanguage": "ru",
-  // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  // "editor.formatOnSave": true,
-  // "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit",
     "source.fixAll.prettier": "explicit",
+    "source.organizeImports": "explicit"
   },
   "eslint.validate": ["javascript"],
   "css.validate": false,
@@ -17,4 +15,11 @@
   "editor.formatOnSave": true,
   "jest.jestCommandLine": "npm run test:unit --",
   "prettier.configPath": ".prettierrc",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "editor.inlayHints.fontSize": 13,
+  "editor.inlayHints.maximumLength": 55,
+  "editor.inlayHints.enabled": "onUnlessPressed"
 }
