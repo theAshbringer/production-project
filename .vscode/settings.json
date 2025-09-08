@@ -7,12 +7,14 @@
   // "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit"
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.prettier": "explicit",
   },
   "eslint.validate": ["javascript"],
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
   "editor.formatOnSave": true,
-  "jest.jestCommandLine": "npm run test:unit --"
+  "jest.jestCommandLine": "npm run test:unit --",
+  "prettier.configPath": ".prettierrc",
 }
